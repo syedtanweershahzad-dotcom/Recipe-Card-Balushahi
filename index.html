@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Premium Balushahi Recipe Card – Indian Sweet</title>
+    
+    <!-- External Dependencies -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,700&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet" />
+    
+    <!-- Local CSS -->
+    <link rel="stylesheet" href="style.css" />
+
+    <!-- Structured Data (JSON-LD) -->
+    <script type="application/ld+json">
+        {
+            "@context": "https://schema.org/",
+            "@type": "Recipe",
+            "name": "Balushahi Recipe | Badusha Mithai",
+            "author": { "@type": "Person", "name": "Tanweer" },
+            "description": "Perfect halwai-style badusha sweet that is crispy on the outside, flaky inside, and melts in the mouth.",
+            "prepTime": "PT20M",
+            "cookTime": "PT20M",
+            "totalTime": "PT40M",
+            "recipeYield": "16 pieces",
+            "recipeIngredient": [
+                "2 cups All-purpose flour",
+                "½ tsp Salt",
+                "1 tsp Baking powder",
+                "½ cup Ghee",
+                "½ cup Water",
+                "2 cups Sugar",
+                "1 cup Water (for syrup)",
+                "6–8 Saffron strands",
+                "¼ tsp Cardamom powder"
+            ],
+            "recipeInstructions": [
+                { "@type": "HowToStep", "text": "Mix flour, salt, baking powder, ghee, and water to form a rough dough. Roll and fold 4 times into thirds to create layers. Rest 30 mins." },
+                { "@type": "HowToStep", "text": "Boil sugar, water, and saffron till sticky. Stir in lemon juice and cardamom powder; turn off heat." },
+                { "@type": "HowToStep", "text": "Shape dough into balls with a center indent. Fry on low heat till crisp and light golden. Soak in warm syrup for 10 mins total." }
+            ],
+            "nutrition": {
+                "@type": "NutritionInformation",
+                "calories": "204 kcal",
+                "carbohydrateContent": "37 g",
+                "proteinContent": "2 g",
+                "fatContent": "6 g",
+                "sugarContent": "25 g",
+                "sodiumContent": "101 mg"
+            },
+            "image": "https://images.unsplash.com/photo-1587313033513-1bfdee943a78?w=600&h=400&fit=crop"
+        }
+    </script>
+</head>
+<body>
+
+    <article class="recipe-card" itemscope itemtype="https://schema.org/Recipe">
+        <!-- Luxury Top Bar Pattern -->
+        <div class="gold-accent" aria-hidden="true"></div>
+
+        <header class="grid grid-cols-1 md:grid-cols-3 gap-6 items-center pb-5 border-b border-orange-100/60">
+            <!-- Left: Title & Beautiful badges -->
+            <div class="md:col-span-2 space-y-2">
+                <div class="flex items-center space-x-2">
+                    <span class="recipe-badge">Traditional Mithai</span>
+                    <span class="signature-link" tabindex="0" role="link" aria-label="Tanweer's signature sweet recipe" onclick="showSignatureAlert()">
+                        <i class="fas fa-crown text-amber-500 mr-1"></i> Tanweer's Premium
+                    </span>
+                </div>
+                
+                <h1 class="text-3xl md:text-4xl font-bold text-amber-950 serif-title leading-tight tracking-tight" itemprop="name">
+                    Balushahi <span class="font-normal italic text-amber-700">Recipe</span>
+                </h1>
+                
+                <p class="text-gray-600 text-sm leading-relaxed max-w-xl" itemprop="description">
+                    A perfect halwai-style badusha sweet, boasting a beautifully crisp golden exterior with a melt-in-the-mouth, flaky layered core.
+                </p>
+
+                <!-- Ratings & Premium Actions -->
+                <div class="flex flex-wrap items-center gap-4 pt-2">
+                    <div class="flex items-center space-x-1.5 text-xs bg-amber-50 px-2.5 py-1 rounded-full border border-amber-200/40">
+                        <span class="flex text-amber-500 space-x-0.5">
+                            <i class="fas fa-star text-[10px]"></i><i class="fas fa-star text-[10px]"></i><i class="fas fa-star text-[10px]"></i><i class="fas fa-star text-[10px]"></i><i class="fas fa-star text-[10px]"></i>
+                        </span>
+                        <span class="font-semibold text-amber-950">5.0 <span class="text-amber-700/60 font-normal">(21 reviews)</span></span>
+                    </div>
+
+                    <div class="flex gap-2 no-print">
+                        <button class="btn-primary text-white font-medium px-4 py-2 rounded-lg shadow-sm flex items-center space-x-1.5 text-xs tracking-wide" onclick="window.print()" aria-label="Print recipe">
+                            <i class="fas fa-print"></i> <span>Print Recipe</span>
+                        </button>
+                        <button class="btn-outline font-medium px-4 py-2 rounded-lg flex items-center space-x-1.5 text-xs tracking-wide" onclick="pinRecipe()" aria-label="Pin recipe on Pinterest">
+                            <i class="fab fa-pinterest-p"></i> <span>Save Pin</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Right: Image with smooth overlay border -->
+            <div class="w-full h-40 md:h-44 shrink-0 relative image-container">
+                <img class="recipe-img" src="/image/balushahi_badusha_indian_sweet_4-1156x1536.jpg" alt="Golden Balushahi sweets" loading="lazy" itemprop="image" />
+            </div>
+        </header>
+
+        <!-- ===== PREMIUM METRICS STRIP ===== -->
+        <section class="bg-gradient-to-r from-amber-50/60 via-orange-50/40 to-amber-50/60 rounded-xl py-3 px-4 border border-amber-100/60 mt-5" aria-label="Recipe time and servings">
+            <div class="metrics-grid grid grid-cols-4 gap-0 text-center text-xs">
+                <div class="metric-item">
+                    <i class="far fa-clock text-amber-700 mb-1 block text-sm"></i>
+                    <span class="text-amber-800/60 block text-[10px] uppercase font-bold tracking-wider">Prep Time</span>
+                    <span class="font-bold text-amber-950 text-sm" itemprop="prepTime" content="PT20M">20 m</span>
+                </div>
+                <div class="metric-item">
+                    <i class="fas fa-fire-burner text-amber-700 mb-1 block text-sm"></i>
+                    <span class="text-amber-800/60 block text-[10px] uppercase font-bold tracking-wider">Cook Time</span>
+                    <span class="font-bold text-amber-950 text-sm" itemprop="cookTime" content="PT20M">20 m</span>
+                </div>
+                <div class="metric-item">
+                    <i class="fas fa-hourglass-half text-orange-600 mb-1 block text-sm"></i>
+                    <span class="text-orange-800/60 block text-[10px] uppercase font-bold tracking-wider">Total</span>
+                    <span class="font-extrabold text-orange-600 text-sm" itemprop="totalTime" content="PT40M">40 m</span>
+                </div>
+                <div class="metric-item">
+                    <i class="fas fa-cookie text-amber-800 mb-1 block text-sm"></i>
+                    <span class="text-amber-800/60 block text-[10px] uppercase font-bold tracking-wider">Yield</span>
+                    <span class="font-bold text-amber-950 servings-link text-sm" itemprop="recipeYield" tabindex="0" role="button" onclick="showServings()">
+                        16 Pcs
+                    </span>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===== THREE-COLUMN BODY ===== -->
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8 pt-6 text-sm">
+
+            <!-- COLUMN 1: Equipment & Nutrition -->
+            <section class="space-y-6" aria-label="Equipment and nutrition">
+                <div class="section-box">
+                    <h2 class="section-title">Kitchen Tools</h2>
+                    <ul class="space-y-2 text-gray-700 font-medium" aria-label="Required kitchen equipment">
+                        <li class="flex items-center gap-2.5"><i class="fas fa-circle text-amber-600 text-[6px]"></i> <span>Heavy bottom pan for frying</span></li>
+                        <li class="flex items-center gap-2.5"><i class="fas fa-circle text-amber-600 text-[6px]"></i> <span>Saucepan for sugar syrup</span></li>
+                        <li class="flex items-center gap-2.5"><i class="fas fa-circle text-amber-600 text-[6px]"></i> <span>Wide mixing bowl</span></li>
+                    </ul>
+                </div>
+                
+                <div class="nutrition-box" itemprop="nutrition" itemscope itemtype="https://schema.org/NutritionInformation">
+                    <h3 class="font-bold text-amber-950 text-xs uppercase tracking-wider mb-2.5 flex items-center justify-between">
+                        <span>Nutrition Facts</span>
+                        <span class="font-normal text-amber-700/60 normal-case text-[10px]">per piece</span>
+                    </h3>
+                    <div class="nutrition-grid">
+                        <div class="nut-item"><span>Calories</span> <strong itemprop="calories">204 kcal</strong></div>
+                        <div class="nut-item"><span>Carbs</span> <strong itemprop="carbohydrateContent">37 g</strong></div>
+                        <div class="nut-item"><span>Protein</span> <strong itemprop="proteinContent">2 g</strong></div>
+                        <div class="nut-item"><span>Fat</span> <strong itemprop="fatContent">6 g</strong></div>
+                        <div class="nut-item"><span>Sugar</span> <strong itemprop="sugarContent">25 g</strong></div>
+                        <div class="nut-item"><span>Sodium</span> <strong itemprop="sodiumContent">101 mg</strong></div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- COLUMN 2: Ingredients -->
+            <section class="section-box" aria-label="Ingredients">
+                <h2 class="section-title">Ingredients</h2>
+                <div class="space-y-4">
+                    <div>
+                        <h3 class="ingredients-subtitle">For the Pastry Dough</h3>
+                        <ul class="space-y-2 text-gray-700 font-medium" itemprop="recipeIngredient">
+                            <li class="flex justify-between border-b border-gray-100 pb-1"><span>All-purpose flour (Maida)</span> <span class="text-amber-900">2 cups</span></li>
+                            <li class="flex justify-between border-b border-gray-100 pb-1"><span>Baking powder</span> <span class="text-amber-900">1 tsp</span></li>
+                            <li class="flex justify-between border-b border-gray-100 pb-1"><span>Pure Ghee</span> <span class="text-amber-900">½ cup</span></li>
+                            <li class="flex justify-between border-b border-gray-100 pb-1"><span>Cold Water</span> <span class="text-amber-900">½ cup</span></li>
+                            <li class="flex justify-between pb-1"><span>Salt</span> <span class="text-amber-900">½ tsp</span></li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h3 class="ingredients-subtitle">Saffron Syrup (Chashni)</h3>
+                        <ul class="space-y-2 text-gray-700 font-medium" itemprop="recipeIngredient">
+                            <li class="flex justify-between border-b border-gray-100 pb-1"><span>Granulated Sugar</span> <span class="text-amber-900">2 cups</span></li>
+                            <li class="flex justify-between border-b border-gray-100 pb-1"><span>Water</span> <span class="text-amber-900">1 cup</span></li>
+                            <li class="flex justify-between border-b border-gray-100 pb-1"><span>Saffron Strands</span> <span class="text-amber-900">6-8</span></li>
+                            <li class="flex justify-between pb-1"><span>Cardamom powder</span> <span class="text-amber-900">¼ tsp</span></li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+            <!-- COLUMN 3: Instructions & Expert Tips -->
+            <section class="section-box" aria-label="Instructions">
+                <h2 class="section-title">Preparation</h2>
+                <ol class="space-y-3 text-gray-700 text-xs md:text-sm leading-relaxed sequential-list" itemprop="recipeInstructions">
+                    <li class="flex gap-2">
+                        <span class="step-num">1</span>
+                        <p>Mix flour, salt, baking powder, ghee, and water into a rough mass. Do not knead. Roll and fold 4 times into thirds to lock in flaky layers. Rest for 30 mins.</p>
+                    </li>
+                    <li class="flex gap-2">
+                        <span class="step-num">2</span>
+                        <p>Boil sugar, water, and saffron till a light, sticky single-string consistency forms. Stir in lemon juice and cardamom powder; turn off heat.</p>
+                    </li>
+                    <li class="flex gap-2">
+                        <span class="step-num">3</span>
+                        <p>Shape into small balls with a deep thumb indent in the center. Fry on a strict low heat until golden and crispy. Soak in warm syrup for 10 mins.</p>
+                    </li>
+                </ol>
+                
+                <!-- Chef Tip Box -->
+                <div class="tip-box mt-4">
+                    <strong class="text-amber-950 font-bold block mb-1 text-xs uppercase tracking-wider">
+                        <i class="far fa-lightbulb text-amber-600 mr-1"></i> Halwai Secret:
+                    </strong>
+                    Never over-knead the dough, otherwise the signature layers won't form. Frying must be done at a very low temperature so the core cooks completely.
+                </div>
+            </section>
+        </div>
+
+        <!-- ===== ELEGANT CTA FOOTER ===== -->
+        <footer class="no-print custom-footer mt-5">
+            <div class="flex items-center space-x-2">
+                <i class="fas fa-heart text-amber-200"></i>
+                <span class="font-medium">Loved Tanweer's Recipe?</span>
+            </div>
+            <a href="#" class="review-button" onclick="reviewRecipe(); return false;" aria-label="Leave a recipe review">
+                Share Your Feedback <i class="fas fa-arrow-right ml-1 text-[10px]"></i>
+            </a>
+        </footer>
+    </article>
+
+    <script src="script.js"></script>
+</body>
+</html>
